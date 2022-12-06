@@ -8,14 +8,13 @@ import numpy as np
 import pandas as pd
 from sklearn import datasets
 
-
 def pregunta_01():
     """
     Complete el código presentado a continuación.
     """
 
     # Cargue el dataset digits
-    digits = datasets.load_digits(n_class=10, return_X_y=False)
+    digits = datasets.load_digits()
 
     # Imprima los nombres de la variable target del dataset
     print(digits.target_names)
@@ -38,7 +37,7 @@ def pregunta_02():
     from sklearn.model_selection import train_test_split
 
     # Cargue el dataset digits
-    digits = datasets.load_digits(n_class=10, return_X_y=False)
+    digits = datasets.load_digits()
 
     # Cree los vectors de características y de salida
     X = digits.data
@@ -73,7 +72,7 @@ def pregunta_03():
     from sklearn.model_selection import train_test_split
 
     # Cargue el dataset digits
-    digits = datasets.load_digits(n_class=10, return_X_y=False)
+    digits = datasets.load_digits()
 
     # Cree los vectors de características y de salida
     X = digits.data
@@ -82,7 +81,7 @@ def pregunta_03():
     # Divida los datos de entrenamiento y prueba. Los conjuntos de datos están
     # estratificados. La semilla del generador de números aleatorios es 42.
     X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=0.2, random_state=42, stratify=y
+        X, y , test_size=0.2, random_state=42, stratify=y
     )
 
     # Inicialice los arreglos para almacenar la precisión para las muestras de
